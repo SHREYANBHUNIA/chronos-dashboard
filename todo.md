@@ -37,3 +37,26 @@ Ready for checkpoint and delivery.
 ## Design reminder
 
 Graphite surfaces, cyan temporal focus, amber divergence signal, Space Grotesk + IBM Plex Mono, asymmetric evidence-board layout.
+
+## Reported bug follow-up
+
+- [ ] Reproduce Traces navigation when coming from investigation and comparisons.
+- [ ] Ensure Traces always renders the archive after click.
+- [ ] Replace the filter placeholder toast with an actual dropdown/popover.
+- [ ] Add usable filter options for severity, service, environment, and status.
+- [ ] Support clearing active filters and show visible filter state.
+- [ ] Validate the flow on desktop and mobile.
+
+## Bug-fix completion
+
+- [x] Reproduced the archive view issue as a navigation/state discoverability problem.
+- [x] Confirmed the Traces archive renders at the root after navigation.
+- [x] Replaced the filter placeholder with an interactive dropdown panel.
+- [x] Added severity, service, environment, and response filters.
+- [x] Added active filter count and clear-all behavior.
+- [x] Added empty-state copy for filtered results.
+- [x] Re-ran TypeScript check and production build successfully.
+
+## Current status
+
+Bug fix is ready for visual validation and checkpoint.
