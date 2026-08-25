@@ -75,3 +75,11 @@ Bug fix is ready for visual validation and checkpoint.
 - [x] Created private repository `SHREYANBHUNIA/chronos-dashboard`.
 - [x] Pushed the current project to the `main` branch.
 - [x] Verified the remote main branch matches local commit.
+
+## Git author identity follow-up
+
+- [ ] Inspect existing commit author and committer metadata.
+- [ ] Set local Git author identity to CSE - 148 - SHREYAN BHUNIA / shreyan.bhunia.k@gmail.com.
+- [ ] Rewrite existing repository commits to remove Manus-generated author metadata.
+- [ ] Force-push the cleaned main history to GitHub.
+- [ ] Verify the GitHub history and repository metadata.
