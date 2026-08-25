@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/**
+ * Chronos design reminder: Instrument Panel Dossier. Graphite surfaces, fine archival rules,
+ * cold cyan for temporal focus, and sodium amber for comparison / divergence.
+ */
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -42,136 +47,81 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-:root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
-}
-
-.dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+:root, .dark {
+  --radius: 0.35rem;
+  --primary: #35d6e8;
+  --primary-foreground: #061216;
+  --sidebar-primary: #35d6e8;
+  --sidebar-primary-foreground: #061216;
+  --background: #101419;
+  --foreground: #e8edf0;
+  --card: #151b20;
+  --card-foreground: #e8edf0;
+  --popover: #1a2128;
+  --popover-foreground: #e8edf0;
+  --secondary: #1b232a;
+  --secondary-foreground: #aebac1;
+  --muted: #171e24;
+  --muted-foreground: #7f8d95;
+  --accent: #202a31;
+  --accent-foreground: #e8edf0;
+  --destructive: #e57282;
+  --destructive-foreground: #fff7f7;
+  --border: rgb(220 238 243 / 10%);
+  --input: rgb(220 238 243 / 12%);
+  --ring: #35d6e8;
+  --chart-1: #35d6e8;
+  --chart-2: #f1b55a;
+  --chart-3: #86bd9a;
+  --chart-4: #e57282;
+  --chart-5: #8e9ca5;
+  --sidebar: #0c1014;
+  --sidebar-foreground: #c9d4da;
+  --sidebar-accent: #182027;
+  --sidebar-accent-foreground: #edf4f6;
+  --sidebar-border: rgb(220 238 243 / 9%);
+  --sidebar-ring: #35d6e8;
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
+  * { @apply border-border outline-ring/50; }
   body {
     @apply bg-background text-foreground;
+    font-family: "Space Grotesk", sans-serif;
+    min-width: 320px;
   }
-  button:not(:disabled),
-  [role="button"]:not([aria-disabled="true"]),
-  [type="button"]:not(:disabled),
-  [type="submit"]:not(:disabled),
-  [type="reset"]:not(:disabled),
-  a[href],
-  select:not(:disabled),
-  input[type="checkbox"]:not(:disabled),
-  input[type="radio"]:not(:disabled) {
-    @apply cursor-pointer;
-  }
+  button:not(:disabled), [role="button"]:not([aria-disabled="true"]), [type="button"]:not(:disabled), [type="submit"]:not(:disabled), [type="reset"]:not(:disabled), a[href], select:not(:disabled), input[type="checkbox"]:not(:disabled), input[type="radio"]:not(:disabled) { @apply cursor-pointer; }
 }
 
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
-  .container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
-    padding-right: 1rem;
+  .chronos-shell {
+    min-height: 100vh;
+    background: radial-gradient(circle at 74% -18%, rgb(53 214 232 / 7%), transparent 31rem), linear-gradient(135deg, #0e1217 0%, #11171c 55%, #0d1115 100%);
   }
+  .chronos-rule { border-color: rgb(221 237 241 / 10%); }
+  .chronos-panel {
+    border: 1px solid rgb(221 237 241 / 10%);
+    background: linear-gradient(145deg, rgb(26 33 40 / 88%), rgb(17 23 28 / 92%));
+    box-shadow: 0 20px 60px rgb(0 0 0 / 12%);
+  }
+  .technical-label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  .mono { font-family: "IBM Plex Mono", monospace; }
+  .dot-grid {
+    background-image: radial-gradient(rgb(176 208 216 / 17%) 0.7px, transparent 0.7px);
+    background-size: 14px 14px;
+  }
+  .hairline-card {
+    border: 1px solid rgb(221 237 241 / 9%);
+    background: rgb(8 12 15 / 20%);
+  }
+}
 
-  .flex {
-    min-height: 0;
-    min-width: 0;
-  }
-
-  @media (min-width: 640px) {
-    .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
-      padding-right: 1.5rem;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .container {
-      padding-left: 2rem; /* 32px - desktop padding */
-      padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
-    }
-  }
+@media (prefers-reduced-motion: no-preference) {
+  button { transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1); }
 }

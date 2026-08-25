@@ -6,6 +6,10 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 
+/**
+ * Chronos design reminder: Instrument Panel Dossier — dark graphite work surface,
+ * measured signal color, and a forensic precision hierarchy.
+ */
 
 function Router() {
   return (
@@ -27,7 +31,7 @@ function App() {
   return (
     <ErrorBoundary>
       <ThemeProvider
-        defaultTheme="light"
+        defaultTheme="dark"
         // switchable
       >
         <TooltipProvider>
