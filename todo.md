@@ -60,3 +60,11 @@ Graphite surfaces, cyan temporal focus, amber divergence signal, Space Grotesk +
 ## Current status
 
 Bug fix is ready for visual validation and checkpoint.
+
+## GitHub export follow-up
+
+- [ ] Verify the current project working tree and GitHub account.
+- [ ] Create or select the `chronos-dashboard` repository.
+- [ ] Push the current Chronos project to GitHub.
+- [ ] Verify the remote repository URL and default branch.
+- [ ] Provide concise deployment guidance and note the build command.
